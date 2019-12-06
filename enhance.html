@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <title>CV Enhancer</title>
     <script>
-    function myFunction() 
+    function displayNavBar() 
     {
         var x = document.getElementById("overlay-container");
         var y = document.getElementsByClassName("overlay");
@@ -31,7 +31,7 @@
                 <h1 id="home-title">CV Enhancer</h1>
                 <h1 id="home-short-title">CvE</h1>
             </a>
-            <a href="javascript:void(0);" class="nav-icon" onclick="myFunction()">
+            <a href="javascript:void(0);" class="nav-icon" onclick="displayNavBar()">
                     <i class="fa fa-bars"></i>
              </a>
         </div>
@@ -39,7 +39,7 @@
     <main>
         <div id="overlay-container">
             <nav id="nav-bar-container" class="left-side">
-                    <a id="nav-buttons" href="enhance.html">
+                    <a id="nav-buttons" href="enhance.html" class="active">
                             <i class="fas fa-bacon"></i>
                             <h1 id="enhance-title">Enhance</h1>
                     </a>
