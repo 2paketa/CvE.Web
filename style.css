@@ -15,34 +15,43 @@ body{
     display: flex;
     flex-flow: column;
     background: #1A1A1B;
-    
 }
 
+
 header #home-container{
-    
-    animation: 3s ease-out 0s 1 slideInFromTop;
+    animation: 1500ms ease-out 0s 1 slideInFromTop;
     padding: 0 6px;
     border: 1px solid #343536;
     background: rgb(42, 42, 42);
     border-radius: 4px;
 }
 
-header #home-container a{
-    display: flex;
+header #home-container #home-item{
+    display: inline-flex;
     flex-flow: row;
     align-items: center;
 }
 
+header a.nav-icon{
+    display: none;
+}
+
+header #home-short-title{
+    display: none;
+}
+
 #nav-bar-container{
-   animation: 2s ease-out 0s 1 slideInFromLeft;
-   flex: 0.3; 
+   animation: 500ms ease-out 0s 1 slideInFromLeft;
+   flex: 0.3 1; 
    margin-top: 1rem; 
    padding: 5px 16px;
    margin: 15px 0;
    border: 1px solid #343536;
    background: rgb(42, 42, 42);
    border-radius: 4px;
+   height: 90.5vh;
 }
+
 
 #nav-bar-container a{
     display: flex;
@@ -63,8 +72,8 @@ main{
 
 
 article{
-    flex: 2;
-    animation: 2s ease-out 0s 1 slideInFromBottom;
+    flex: 2 3;
+    animation: 1000ms ease-out 0s 1 slideInFromBottom;
     display: flex;
     flex-flow: column;
     border: 1px solid #343536;
@@ -72,6 +81,11 @@ article{
     border-radius: 4px;
     margin: 15px 16px;
     padding: 15px 16px;
+}
+
+article #exp-button{
+    font-size: 2rem;
+    padding: 16px 0px;
 }
 
 
@@ -109,5 +123,58 @@ article{
 }
 
 
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    #nav-bar-container{
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        flex: 0;
+    }
+
+    #overlay-container{
+        animation: 500ms ease-out 0s 1 fadeIn;
+        display: none;
+        height: 100%;
+        margin: 15px 0;
+        flex-flow: row;
+        position: fixed;
+        width:100%;
+        background-color: rgba(0,0,0,0.5)
+    }
+
+
+    header #home-title{
+        display: none;
+    }
+
+    header #home-short-title{
+        display: block;
+    }
+
+    main{
+        height: 100%;
+    }
+
+    header a.nav-icon{
+        display: inline-flex;
+        float: right;
+        padding-top: 5px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    #overlay-container{
+        display: block !important;
+    }
+}
 
 
