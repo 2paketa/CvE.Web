@@ -17,7 +17,7 @@ body{
     background: #1A1A1B;
 }
 
-#header-container{
+header{
     height: 38px;
     width: 100%;
 }
@@ -47,9 +47,6 @@ header #home-short-title{
     display: none;
 }
 
-
-
-
 main{
     display: flex;
     flex-flow: row;
@@ -70,9 +67,12 @@ article{
     padding: 15px 16px;
 }
 
-article #exp-button{
-    font-size: 2rem;
-    padding: 16px 0px;
+article .article-item {
+    margin: 16px 0px;
+}
+
+#library article{
+    display: block;
 }
 
 #nav-bar-container{
